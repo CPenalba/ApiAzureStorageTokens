@@ -11,7 +11,7 @@ namespace ApiAzureStorageTokens.Services
         {
             string azureKeys = configuration.GetValue<string>("AzureKeys:StorageAccount");
             TableServiceClient serviceClient = new TableServiceClient(azureKeys);
-            this.tablaAlumnos =serviceClient.GetTableClient("alumnos");
+            this.tablaAlumnos = serviceClient.GetTableClient("alumnos");
         }
 
         public string GenerateToken(string curso)
